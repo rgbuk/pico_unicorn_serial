@@ -27,8 +27,8 @@ int main() {
       displayBufferPosition++;
     }
 
-    if((displayBufferPosition == 112) || (x == 255)){
-      for(int i = 0; i < displayBufferPosition; i++){
+    if((displayBufferPosition == 111) || (x == 255)){
+      for(int i = 0; i <= displayBufferPosition; i++){
         strncpy(inputBuffer, displayBuffer[i], 20);
         sscanf(inputBuffer, "%d %d %d %d %d", &x, &y, &r, &g, &b);
         pico_unicorn.set_pixel(x, y, r, g, b);
@@ -38,3 +38,4 @@ int main() {
   }
   return 0;
 }
+
