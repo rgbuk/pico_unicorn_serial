@@ -10,7 +10,7 @@ colour_session = ""
 
 def set_pixel(sx, sy, sr, sg, sb):
     print("Writing to Pico")
-    ser.write('{:03d} {:03d} {:03d} {:03d} {:03d}'.format(sx, sy, sr, sg, sb).encode())
+    ser.write('MSG {:03d} {:03d} {:03d} {:03d} {:03d}\n'.format(sx, sy, sr, sg, sb).encode() + "\n")
     print("Pico Responded: {}".format(ser.readline().decode()))
 
 
